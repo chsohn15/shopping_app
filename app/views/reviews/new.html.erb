@@ -1,0 +1,16 @@
+<h1>Write a Review</h1>
+
+<div class="container">
+<%= form_for @review do |f| %>
+<%= f.label :user_name %>
+<%= f.text_field :user_name %><br>
+<%= f.label :rating %>
+<%= f.number_field :rating, min: 0, max: 5%><br>
+<%= f.label :review %>
+<%= f.text_field :review %><br>
+
+
+<%= f.submit "Submit" %>
+
+<% end %>
+</div>

@@ -1,4 +1,5 @@
 class Item < ApplicationRecord
+    has_many :reviews
     validates :name, uniqueness: true
 
     def self.size_s
@@ -16,4 +17,6 @@ class Item < ApplicationRecord
     def self.size_xl
         Item.where(size:"XL")
     end
+
+
 end
