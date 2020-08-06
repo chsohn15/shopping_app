@@ -1,0 +1,16 @@
+<h1>Edit item</h1>
+<%= form_for @item do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %><br>
+<%= f.label :price %>
+<%= f.number_field :price, min: 0 %><br>
+<%= f.label :brand %>
+<%= f.text_field :brand %><br>
+<%= f.label :color %>
+<%= f.text_field :color %><br>
+<%= f.label :size %>
+<%= f.text_field :size %><br>
+<%= f.label :img_url, "Image URL" %>
+<%= f.text_field :img_url %><br>
+<%= f.submit "Submit" %>
+<% end %>
