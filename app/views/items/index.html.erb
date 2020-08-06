@@ -1,7 +1,23 @@
 <h1>Funny Philosopher Official</h1>
 
+<%= form_tag items_path, method: :get do %>
+    <%= radio_button_tag "size", "S", checked= (params[:size] == "S") %>
+    <%= label_tag "size_S", "Size Small" %>
+    <%= radio_button_tag "size", "M", checked= (params[:size] == "M") %>
+    <%= label_tag "size_M", "Size Medium" %>
+    <%= radio_button_tag "size", "L", checked= (params[:size] == "L") %>
+    <%= label_tag "size_L", "Size Large" %>
+    <%= radio_button_tag "size", "XL", checked= (params[:size] == "XL") %>
+    <%= label_tag "size_XL", "Size Extra Large" %>
+    <%= radio_button_tag "size", "all", checked= (params[:size] == "all") %>
+    <%= label_tag "size_all", "All" %>
+    <%= submit_tag "Get Items" %>
+    <% end %>
+
 <% @items.each do |item| %>
 <ul>
     <li><%= link_to item.name, item_path(item) %></li>
 </ul>
-<% end %>
+<% end %> <br>
+
+<%= link_to "Create New Item", new_item_path %>

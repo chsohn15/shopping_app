@@ -1,4 +1,5 @@
 <h1>Create a new item</h1>
+<div>
 <%= form_for @item do |f| %>
 <%= f.label :name %>
 <%= f.text_field :name %><br>
@@ -14,3 +15,4 @@
 <%= f.text_field :img_url %><br>
 <%= f.submit "Submit" %>
 <% end %>
+</div>

@@ -1,4 +1,6 @@
 <h1>Edit item</h1>
+
+<div>
 <%= form_for @item do |f| %>
 <%= f.label :name %>
 <%= f.text_field :name %><br>
@@ -11,6 +13,6 @@
 <%= f.label :size %>
 <%= f.text_field :size %><br>
 <%= f.label :img_url, "Image URL" %>
-<%= f.text_field :img_url %><br>
+<%= f.text_field :img_url %> </div> <br> <br>
 <%= f.submit "Submit" %>
 <% end %>

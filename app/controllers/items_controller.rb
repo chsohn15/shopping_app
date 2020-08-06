@@ -1,7 +1,17 @@
 class ItemsController < ApplicationController
 
     def index
-        @items = Item.all 
+        if params[:size] == "S"
+            @items = Item.size_s
+        elsif params[:size] == "M"
+            @items = Item.size_m
+        elsif params[:size] == "L"
+            @items = Item.size_l
+        elsif params[:size] == "XL"
+            @items = Item.size_xl
+        else
+            @items = Item.all
+        end
     end
 
     def show
