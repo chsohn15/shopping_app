@@ -5,3 +5,33 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+require 'faker'
+
+Item.destroy_all
+
+def random_size
+    sizes = ["S", "M", "L","XL"]
+    sizes.sample
+end
+5.times do 
+    Item.create(name: "#{Faker::GreekPhilosophers.name} Shirt", 
+    price: "#{Faker::Number.decimal(l_digits: 2)}",
+    brand: "#{Faker::FunnyName.name}", 
+    img_url: "#{Faker::LoremFlickr.image(search_terms: ['shopping'])}",
+    color: "#{Faker::Color.color_name}",
+    size: random_size)
+end
+
+5.times do 
+    Item.create(name: "#{Faker::GreekPhilosophers.name} Pants", 
+    price: "#{Faker::Number.decimal(l_digits: 2)}",
+    brand: "#{Faker::FunnyName.name}", 
+    img_url: "#{Faker::LoremFlickr.image(search_terms: ['shopping'])}",
+    color: "#{Faker::Color.color_name}",
+    size: random_size)
+end
+
+
+
+
