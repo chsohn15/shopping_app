@@ -12,7 +12,7 @@ div {
     font-family: 'Lobster', cursive;
 }
 
-input[type=text] {
+.container[type=textarea] {
     width: 30%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -21,7 +21,7 @@ input[type=text] {
     color: black;
   }
 
-  label {
+  .container {
     display: inline-block;
     float: left;
     clear: left;
@@ -29,7 +29,7 @@ input[type=text] {
     text-align: left;
     }
 
-    input {
+    .container {
     display: inline-block;
     float: left;
     }
