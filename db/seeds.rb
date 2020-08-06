@@ -18,16 +18,17 @@ end
     Item.create(name: "#{Faker::GreekPhilosophers.name} Shirt", 
     price: "#{Faker::Number.decimal(l_digits: 2)}",
     brand: "#{Faker::FunnyName.name}", 
-    img_url: "#{Faker::LoremFlickr.image(search_terms: ['shopping'])}",
+    img_url: "#{Faker::LoremFlickr.image(search_terms: ['painting','philosopher'])}",
     color: "#{Faker::Color.color_name}",
     size: random_size)
 end
+
 
 5.times do 
     Item.create(name: "#{Faker::GreekPhilosophers.name} Pants", 
     price: "#{Faker::Number.decimal(l_digits: 2)}",
     brand: "#{Faker::FunnyName.name}", 
-    img_url: "#{Faker::LoremFlickr.image(search_terms: ['shopping'])}",
+    img_url: "#{Faker::LoremFlickr.image(search_terms: ['painting','philosopher'])}",
     color: "#{Faker::Color.color_name}",
     size: random_size)
 end
