@@ -7,7 +7,7 @@
   <% if @item.errors.any? %>
     <div id="error_explanation">
       <h2>There were some errors:</h2>
-        <%= pluralize(@item.errors.count, "errors")%>
+        <%= pluralize(@item.errors.count, "error")%>
         </h2>
       <ul>
         <% @item.errors.full_messages.each do |message| %>
