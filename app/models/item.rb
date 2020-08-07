@@ -1,6 +1,6 @@
 class Item < ApplicationRecord
     has_many :reviews
-    validates :name, uniqueness: true
+    validates_uniqueness_of :name, :message =>"This name is already taken. Please create a unique name."
 
     def self.size_s
         Item.where(size: "S")

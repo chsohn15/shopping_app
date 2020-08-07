@@ -1,8 +1,23 @@
 <h1>Create a new item</h1>
+
+
+
 <div class="container">
 <%= form_for @item do |f| %>
+  <% if @item.errors.any? %>
+    <div id="error_explanation">
+      <h2>There were some errors:</h2>
+        <%= pluralize(@item.errors.count, "errors")%>
+        </h2>
+      <ul>
+        <% @item.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+<% end %>
 <%= f.label :name %>
-<%= f.text_field :name %><br>
+<%= f.text_field :name, :required => true %><br>
 <%= f.label :price %>
 <%= f.number_field :price, min: 0 %><br>
 <%= f.label :brand %>
@@ -13,6 +28,7 @@
 <%= f.text_field :size %><br>
 <%= f.label :img_url, "Image URL" %>
 <%= f.text_field :img_url %><br>
+
 <%= f.submit "Submit" %>
 <% end %>
 </div>
